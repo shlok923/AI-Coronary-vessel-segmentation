@@ -58,6 +58,7 @@ def find_checkpoint(config_or_dir):
     base_name = os.path.basename(os.path.normpath(ckpt_dir))
     candidate_dirs = [
         ckpt_dir,
+        os.path.join('/content/drive/MyDrive/AI-Coronary-vessel-segmentation', ckpt_dir),
         os.path.join('/content/drive/MyDrive/coronary-vessel-segmentation', ckpt_dir),
         os.path.join('/content/drive/MyDrive', ckpt_dir),
         os.path.join('results/checkpoints', base_name),

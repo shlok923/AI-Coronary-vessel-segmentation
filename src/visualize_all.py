@@ -26,6 +26,7 @@ def find_file(relative_path):
     """Search for a file locally or under mounted Google Drive project paths."""
     candidates = [
         relative_path,
+        os.path.join('/content/drive/MyDrive/AI-Coronary-vessel-segmentation', relative_path),
         os.path.join('/content/drive/MyDrive/coronary-vessel-segmentation', relative_path),
         os.path.join('/content/drive/MyDrive', relative_path),
     ]
@@ -63,6 +64,7 @@ def generate_qualitative_comparisons():
 
     if not os.path.exists(data_root):
         drive_candidates = [
+            '/content/drive/MyDrive/AI-Coronary-vessel-segmentation/data/DCA1',
             '/content/drive/MyDrive/coronary-vessel-segmentation/data/DCA1',
             '/content/drive/MyDrive/DCA1_data',
             '/content/drive/MyDrive/Database_134_Angiograms',

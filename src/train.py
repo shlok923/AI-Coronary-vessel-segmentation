@@ -235,7 +235,10 @@ def train(config, config_path, resume=False):
 
     # Checkpoint paths & automatic Google Drive mirroring
     best_ckpt_path = os.path.join(ckpt_dir, 'best.pth')
-    drive_backup_dir = os.path.join('/content/drive/MyDrive/coronary-vessel-segmentation', ckpt_dir)
+    drive_proj = '/content/drive/MyDrive/AI-Coronary-vessel-segmentation'
+    if not os.path.exists(drive_proj) and os.path.exists('/content/drive/MyDrive/coronary-vessel-segmentation'):
+        drive_proj = '/content/drive/MyDrive/coronary-vessel-segmentation'
+    drive_backup_dir = os.path.join(drive_proj, ckpt_dir)
     drive_ckpt_path = os.path.join(drive_backup_dir, 'best.pth')
 
     # Training loop
