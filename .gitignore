@@ -13,10 +13,7 @@ data/DCA1/masks/
 data/DCA1/skeletons/
 
 # Results (generated files — optionally gitignored)
-results/checkpoints/
-results/runs/
-results/figures/
-results/tables/
+PPT_Report/
 
 # Notebooks checkpoints
 .ipynb_checkpoints/
